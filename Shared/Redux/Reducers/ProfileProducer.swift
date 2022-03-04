@@ -102,7 +102,8 @@ let profileReducer: Reducer<ProfileState, ProfileAction> = .init { state, action
     case .signOut:
         KeychainService.shared.removeAll()
         FirebaseAuthentication.shared.signOut()
+        FirebaseFirestore.shared.removeChatsListerner()
+        FirebaseFirestore.shared.removeChatRoomListener()
         await MainActor.run { state.profile = nil }
-        break
     }
 }

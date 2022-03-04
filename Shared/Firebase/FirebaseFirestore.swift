@@ -223,9 +223,14 @@ class FirebaseFirestore {
         }
     }
     
-    func removeChatRoomListen() {
+    func removeChatRoomListener() {
         chatRoomListener?.remove()
         chatRoomListener = nil
+    }
+    
+    func removeChatsListerner() {
+        chatsListener?.remove()
+        chatsListener = nil
     }
     
     func listenChatRoom(_ chatId: String, _ limit: Int, _ completed: @escaping ([Message]) -> ()) {

@@ -35,7 +35,7 @@ let messagesReducer: Reducer<MessagesState, MessagesAction> = .init { state, act
         }
         
     case .leaveRoom:
-        FirebaseFirestore.shared.removeChatRoomListen()
+        FirebaseFirestore.shared.removeChatRoomListener()
         DispatchQueue.main.async {
             state.isLoadingMessages = false
             state.ableToloadMore = true

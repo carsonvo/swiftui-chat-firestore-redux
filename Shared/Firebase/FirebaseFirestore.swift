@@ -47,9 +47,7 @@ class FirebaseFirestore {
                 let result = Result { try document.data(as: Profile.self) }
                 switch result {
                 case .success(let profile):
-                    if let profile = profile {
-                        return profile
-                    }
+                    return profile
                 case .failure(_):
                    break
                 }
@@ -70,9 +68,7 @@ class FirebaseFirestore {
                 let result = Result { try document.data(as: Profile.self) }
                 switch result {
                 case .success(let profile):
-                    if let profile = profile {
-                        return profile
-                    }
+                    return profile
                 case .failure(_):
                    break
                 }
@@ -113,9 +109,7 @@ class FirebaseFirestore {
                 let result = Result { try document.data(as: Chat.self) }
                 switch result {
                 case .success(let chat):
-                    if let chat = chat {
-                        return chat
-                    }
+                    return chat
                 case .failure(_):
                    break
                 }

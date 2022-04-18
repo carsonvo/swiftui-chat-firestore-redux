@@ -22,6 +22,7 @@ struct ChatApp: App {
                 .environmentObject(appStore.chatState)
                 .environmentObject(appStore.messagesState)
                 .environmentObject(appStore.profileResultState)
+                .environment(\.colorScheme, .light)
         }
     }
 }
